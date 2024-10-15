@@ -1,0 +1,47 @@
+
+  #timeline .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .timeline {
+    position: relative;
+    padding: 20px 0;
+  }
+
+  .timeline-item {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .timeline-icon {
+    flex-shrink: 0;
+    background: #333;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .timeline-content {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .timeline-title {
+    font-size: 1.2em;
+    margin: 0 0 5px;
+  }
+
+  .timeline span {
+    font-size: 0.9em;
+    color: #777;
+  }

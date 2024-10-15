@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.scss" />
+
+    <title>Mi CV</title>
+    <style>
+/* General Styles for the PDF Viewer Page */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pdf-container {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    padding: 1px;
+    background-color: #02aab0;
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 2px solid #0056b3;
+}
+
+
+.back-link {
+    display: inline-block;
+    margin: 5px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.7rem;
+    border: 1px solid #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+iframe {
+    width: 100%;
+    height: calc(100% - 60px); /* Adjust height to account for header */
+    border: none;
+}
+
+    </style>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+
+<body>
+    <div class="pdf-container">
+        <header>
+        <p>
+            <span class="d-flex mt-3 justify-content-center">
+                <a
+                  rel="noreferrer"
+                  class="cta-btn  cta-btn--resume"
+                  href="index.html"
+             
+                  
+                >
+                  Return                        
+                </a>
+                </span>
+        </p>
+     
+        </header>
+        <iframe src="./assets/Cv.pdf" title="Mi CV" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+
+</body>
+</html>
