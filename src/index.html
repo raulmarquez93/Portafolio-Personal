@@ -171,95 +171,131 @@
       </div>
     </section>
     <!-- /END Projects Section -->
+
     <section id="timeline">
       <div class="container">
         <h2 class="section-title dark-blue-text">Career Timeline</h2>
     
         <div class="timeline">
-          <!-- Education Section -->
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fa fa-graduation-cap"></i>
+          <!-- Education Column -->
+          <div class="timeline-column">
+            <h3 class="timeline-column-title">Educación</h3>
+    
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fa fa-graduation-cap"></i>
+              </div>
+              <div class="timeline-content">
+                <h4 class="timeline-title" onclick="toggleDetails(this)">Grado Medio en SMR <span>2020 - 2022</span></h4>
+                <p class="timeline-details hidden">
+                  Base sólida en mantenimiento de sistemas, redes y soporte técnico.
+                </p>
+              </div>
+              <div class="vertical-line"></div> <!-- Línea vertical -->
+
             </div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Grado Medio en Sistemas Microinformáticos y Redes</h3>
-              <span>2020 - 2022</span>
-              <p>
-                Obtuve una base sólida en mantenimiento de sistemas informáticos, configuración de redes y soporte técnico.
-              </p>
+    
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fa fa-graduation-cap"></i>
+              </div>
+              <div class="timeline-content">
+                <h4 class="timeline-title" onclick="toggleDetails(this)">Grado Superior en DAM <span>2022 - 2024</span></h4>
+                <p class="timeline-details hidden">
+                  Desarrollo de aplicaciones multiplataforma para escritorio y móviles.
+                </p>
+              </div>
+              <div class="vertical-line"></div> <!-- Línea vertical -->
+
+            </div>
+    
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fa fa-graduation-cap"></i>
+              </div>
+              <div class="timeline-content">
+                <h4 class="timeline-title" onclick="toggleDetails(this)">Especialización en IA <span>2024 - Present</span></h4>
+                <p class="timeline-details hidden">
+                  Técnicas de Machine Learning y Deep Learning.
+                </p>
+              </div>
             </div>
           </div>
     
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fa fa-graduation-cap"></i>
-            </div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Grado Superior en Desarrollo de Aplicaciones Multiplataforma</h3>
-              <span>2022 - 2024</span>
-              <p>
-                Aprendí a desarrollar aplicaciones tanto para escritorio como para dispositivos móviles, usando diversas tecnologías de programación.
-              </p>
-            </div>
-          </div>
+          <!-- Work Experience Column -->
+          <div class="timeline-column">
+            <h3 class="timeline-column-title">Experiencia</h3>
     
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fa fa-graduation-cap"></i>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fa fa-briefcase"></i>
+              </div>
+              <div class="timeline-content">
+                <h4 class="timeline-title" onclick="toggleDetails(this)">Promotor en Samsung <span>Jun - Ago 2022</span></h4>
+                <p class="timeline-details hidden">
+                  Promoción de productos electrónicos y asesoramiento tecnológico.
+                </p>
+              </div>
+              <div class="vertical-line"></div> <!-- Línea vertical -->
             </div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Especialización en Inteligencia Artificial</h3>
-              <span>2024 - Present</span>
-              <p>
-                Me especialicé en técnicas de Machine Learning y Deep Learning, adquiriendo habilidades en la implementación de modelos de IA.
-              </p>
-            </div>
-          </div>
     
-          <!-- Work Experience Section -->
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fa fa-briefcase"></i>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fa fa-briefcase"></i>
+              </div>
+              <div class="timeline-content">
+                <h4 class="timeline-title" onclick="toggleDetails(this)">Programador Junior en NTT Data <span>Mar - Jun 2024</span></h4>
+                <p class="timeline-details hidden">
+                  Desarrollo de soluciones con Spring y Angular.
+                </p>
+              </div>
+              <div class="vertical-line"></div> <!-- Línea vertical -->
+
             </div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Promotor en Samsung</h3>
-              <span>Juny - August 2022</span>
-              <p>
-                Realicé funciones de promoción de productos, impulsando la venta de dispositivos electrónicos y asesorando a los clientes sobre tecnología.
-              </p>
-            </div>
-          </div>
     
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fa fa-briefcase"></i>
-            </div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Programador Junior en NTT Data (FCT)</h3>
-              <span>March - Juny 2024</span>
-              <p>
-                Desarrollé soluciones de software para clientes, colaborando en proyectos de integración y optimización de sistemas con tecnologías como Spring y Angular.
-              </p>
-            </div>
-          </div>
-    
-          <!-- Current Projects Section -->
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fa fa-server"></i>
-            </div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">VPS Deployment</h3>
-              <span>2024 - Present</span>
-              <p>
-                Actualmente estoy levantando un servidor VPS para alojar mis propias páginas web, experimentando con la gestión de servidores y la configuración de entornos de producción.
-              </p>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+                <i class="fa fa-server"></i>
+              </div>
+              <div class="timeline-content">
+                <h4 class="timeline-title" onclick="toggleDetails(this)">VPS Deployment <span>2024 - Present</span></h4>
+                <p class="timeline-details hidden">
+                  Configuración de servidor VPS para alojar páginas web.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- /END Timeline Section -->
+    <script>
+      function toggleDetails(element) {
+          const details = element.nextElementSibling;
+          details.classList.toggle('hidden');
+          details.classList.toggle('show');
+      }
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elementsToAnimate = document.querySelectorAll(".timeline-item, .section-title");
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1 // Activa la animación cuando el 10% del elemento es visible
+      });
+  
+      elementsToAnimate.forEach((el) => {
+        observer.observe(el);
+      });
+    });
+  </script>
+  
 
     <!-- **** Contact Section **** -->
     <section id="contact">

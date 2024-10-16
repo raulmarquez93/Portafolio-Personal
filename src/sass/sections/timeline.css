@@ -1,0 +1,48 @@
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0px 50px;
+}
+
+.timeline-column {
+  width: 48%;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.vertical-line {
+  margin: 0 auto;
+  width: 2px;
+  height: 100%;
+  background: #333;
+}
+
+.timeline-icon {
+  width: 30px;
+  height: 30px;
+  background: #333;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.timeline-title {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.timeline-details {
+  margin-top: 10px;
+  display: none;
+  color: #555;
+}
+
+.timeline-details.show {
+  display: block;
+}/*# sourceMappingURL=timeline.css.map */
