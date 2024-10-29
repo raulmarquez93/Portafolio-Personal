@@ -1,7 +1,7 @@
 .timeline {
     display: flex;
     justify-content: space-between;
-    margin: 50px 0;
+    margin: 70px 0;
   
     // Media Query para pantallas pequeñas
     @media (max-width: 768px) {
@@ -39,7 +39,7 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        margin-right: 10px;
+        margin: 20px;
       }
   
       .vertical-line {
@@ -52,19 +52,25 @@
       .timeline-title {
         font-weight: bold;
         cursor: pointer;
-      }
+      
   
-      .timeline-details {
-        margin-top: 10px;
-        display: none;
-        color: $dark-grey;
+   
+      
   
         &.show {
           display: block;
         }
+      
+    
       }
     }
   }
+  .timeline.timeline-details.black-mode {
+      color: #E0E0E0;
+      &.show {
+        display: block;
+      }
+    }
   
   .section-title {
     opacity: 0;
@@ -76,3 +82,4 @@
       transform: translateY(0);
     }
   }
+ 

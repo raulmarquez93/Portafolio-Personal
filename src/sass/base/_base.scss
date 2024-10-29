@@ -11,6 +11,10 @@ body {
   text-align: center;
   scroll-behavior: smooth;
 }
+body.dark-mode {
+  background-color: #121212;
+  color: #E0E0E0;
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar {
