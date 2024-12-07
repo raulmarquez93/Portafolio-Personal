@@ -1,0 +1,43 @@
+name: Deploy to GitHub Pages
+
+# Activar el flujo de trabajo en los eventos de push a la rama "main"
+on:
+  push:
+    branches:
+      - "main"  # Cambia esto si tu rama principal tiene otro nombre (por ejemplo, "master")
+  workflow_dispatch:  # Permite ejecutar manualmente desde la pestaña de Actions
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Usamos un runner con Ubuntu
+
+    steps:
+    # 1. Checkout el código del repositorio
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # 2. Configurar Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # Usa la versión de Node.js que necesites
+
+    # 3. Instalar las dependencias del proyecto
+    - name: Install dependencies
+      run: npm install
+
+    # 4. Construir el proyecto (esto depende de tu configuracion)
+    - name: Build project
+      run: npm run build  # O usa el comando que sea necesario para tu proyecto
+
+    # 5. Desplegar los archivos generados a la rama "gh-pages"
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        # Ruta de la carpeta que quieres subir a GitHub Pages (por lo general "dist" o "build")
+        folder: dist  # Cambia "dist" si tu carpeta de salida es diferente
+
+        # Opcional: Personaliza el nombre de la rama si no es "gh-pages"
+        branch: gh-pages  # La rama donde GitHub Pages lee el contenido
+
+        
