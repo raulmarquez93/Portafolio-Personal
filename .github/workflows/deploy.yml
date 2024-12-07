@@ -35,9 +35,12 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         # Ruta de la carpeta que quieres subir a GitHub Pages (por lo general "dist" o "build")
-        folder: dist  # Cambia "dist" si tu carpeta de salida es diferente
+        publish_dir: dist  # Cambia "dist" si tu carpeta de salida es diferente
 
         # Opcional: Personaliza el nombre de la rama si no es "gh-pages"
-        branch: gh-pages  # La rama donde GitHub Pages lee el contenido
+        publish_branch: gh-pages  # La rama donde GitHub Pages lee el contenido
+
+        # Añade tu token de GitHub para permitir el despliegue
+        github_token: ${{ secrets.GH_TOKEN }}  # Necesitas configurar este secreto en tu repositorio
 
         
