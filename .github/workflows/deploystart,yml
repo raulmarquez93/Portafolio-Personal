@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Esto se activará cuando hagas push a la rama main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # 1. Check out the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # 2. Set up Node.js (si usas Node.js en tu proyecto)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Cambia la versión según lo que uses
+
+      # 3. Instala las dependencias y construye el proyecto
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build  # Este comando debe generar la carpeta dist
+
+      # 4. Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # La rama de destino en la que se va a desplegar
+          folder: dist  # La carpeta que contiene los archivos generados
+          token: ${{ secrets.GITHUB_TOKEN }}  # Token para autenticarse
+
