@@ -283,7 +283,6 @@ This chatbot, built with Flask and Python, uses a CSV file to store frequently a
       </div>
     </section>
     <!-- /END Projects Section -->
-
     <section id="timeline">
       <div class="container">
         <h2 class="section-title dark-blue-text">Career Timeline</h2>
@@ -291,20 +290,19 @@ This chatbot, built with Flask and Python, uses a CSV file to store frequently a
         <div class="timeline">
           <!-- Education Column -->
           <div class="timeline-column">
-            <h3 class="timeline-column-title">Educación</h3>
+            <h3 class="timeline-column-title">Education</h3>
     
             <div class="timeline-item">
               <div class="timeline-icon">
                 <i class="fa fa-graduation-cap"></i>
               </div>
               <div class="timeline-content">
-                <h4 class="timeline-title" onclick="toggleDetails(this)">Grado Medio en SMR <span>2020 - 2022</span></h4>
+                <h4 class="timeline-title" onclick="toggleDetails(this)">Intermediate Degree in SMR <span>2020 - 2022</span></h4>
                 <p class="timeline-details hidden">
-                  Base sólida en mantenimiento de sistemas, redes y soporte técnico.
+                  Solid foundation in system maintenance, networks, and technical support.
                 </p>
               </div>
-              <div class="vertical-line"></div> <!-- Línea vertical -->
-
+              <div class="vertical-line"></div> <!-- Vertical line -->
             </div>
     
             <div class="timeline-item">
@@ -312,13 +310,12 @@ This chatbot, built with Flask and Python, uses a CSV file to store frequently a
                 <i class="fa fa-graduation-cap"></i>
               </div>
               <div class="timeline-content">
-                <h4 class="timeline-title" onclick="toggleDetails(this)">Grado Superior en DAM <span>2022 - 2024</span></h4>
+                <h4 class="timeline-title" onclick="toggleDetails(this)">Higher Degree in DAW <span>2022 - 2024</span></h4>
                 <p class="timeline-details hidden">
-                  Desarrollo de aplicaciones multiplataforma para escritorio y móviles.
+                  Desarrollador de aplicaciones web 
                 </p>
               </div>
-              <div class="vertical-line"></div> <!-- Línea vertical -->
-
+              <div class="vertical-line"></div> <!-- Vertical line -->
             </div>
     
             <div class="timeline-item">
@@ -326,9 +323,9 @@ This chatbot, built with Flask and Python, uses a CSV file to store frequently a
                 <i class="fa fa-graduation-cap"></i>
               </div>
               <div class="timeline-content">
-                <h4 class="timeline-title" onclick="toggleDetails(this)">Especialización en IA <span>2024 - Present</span></h4>
+                <h4 class="timeline-title" onclick="toggleDetails(this)">Specialization in AI <span>2024 - Present</span></h4>
                 <p class="timeline-details hidden">
-                  Técnicas de Machine Learning y Deep Learning.
+                  Machine Learning and Deep Learning techniques.
                 </p>
               </div>
             </div>
@@ -336,19 +333,19 @@ This chatbot, built with Flask and Python, uses a CSV file to store frequently a
     
           <!-- Work Experience Column -->
           <div class="timeline-column">
-            <h3 class="timeline-column-title">Experiencia</h3>
+            <h3 class="timeline-column-title">Experience</h3>
     
             <div class="timeline-item">
               <div class="timeline-icon">
                 <i class="fa fa-briefcase"></i>
               </div>
               <div class="timeline-content">
-                <h4 class="timeline-title" onclick="toggleDetails(this)">Promotor en Samsung <span>Jun - Ago 2022</span></h4>
+                <h4 class="timeline-title" onclick="toggleDetails(this)">Promoter at Samsung <span>Jun - Aug 2022</span></h4>
                 <p class="timeline-details hidden">
-                  Promoción de productos electrónicos y asesoramiento tecnológico.
+                  Promotion of electronic products and technological advice.
                 </p>
               </div>
-              <div class="vertical-line"></div> <!-- Línea vertical -->
+              <div class="vertical-line"></div> <!-- Vertical line -->
             </div>
     
             <div class="timeline-item">
@@ -356,13 +353,12 @@ This chatbot, built with Flask and Python, uses a CSV file to store frequently a
                 <i class="fa fa-briefcase"></i>
               </div>
               <div class="timeline-content">
-                <h4 class="timeline-title" onclick="toggleDetails(this)">Programador Junior en NTT Data <span>Mar - Jun 2024</span></h4>
+                <h4 class="timeline-title" onclick="toggleDetails(this)">Junior Programmer at NTT Data <span>Mar - Jun 2024</span></h4>
                 <p class="timeline-details hidden">
-                  Desarrollo de soluciones con Spring y Angular.
+                  Development of solutions with Spring and Angular.
                 </p>
               </div>
-              <div class="vertical-line"></div> <!-- Línea vertical -->
-
+              <div class="vertical-line"></div> <!-- Vertical line -->
             </div>
     
             <div class="timeline-item">
@@ -372,7 +368,7 @@ This chatbot, built with Flask and Python, uses a CSV file to store frequently a
               <div class="timeline-content">
                 <h4 class="timeline-title" onclick="toggleDetails(this)">VPS Deployment <span>2024 - Present</span></h4>
                 <p class="timeline-details hidden">
-                  Configuración de servidor VPS para alojar páginas web.
+                  VPS server setup to host websites.
                 </p>
               </div>
             </div>
@@ -386,27 +382,29 @@ This chatbot, built with Flask and Python, uses a CSV file to store frequently a
           details.classList.toggle('hidden');
           details.classList.toggle('show');
       }
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const elementsToAnimate = document.querySelectorAll(".timeline-item, .section-title");
-  
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-            observer.unobserve(entry.target);
-          }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const elementsToAnimate = document.querySelectorAll(".timeline-item, .section-title");
+    
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1 // Triggers the animation when 10% of the element is visible
         });
-      }, {
-        threshold: 0.1 // Activa la animación cuando el 10% del elemento es visible
+    
+        elementsToAnimate.forEach((el) => {
+          observer.observe(el);
+        });
       });
-  
-      elementsToAnimate.forEach((el) => {
-        observer.observe(el);
-      });
-    });
-  </script>
+    </script>
+    
+    
   
 
     <!-- **** Contact Section **** -->
